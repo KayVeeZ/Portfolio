@@ -29,7 +29,7 @@ const MatrixRainingCode = () => {
       const draw = () => {
         ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
         ctx.fillRect(0, 0, width, height);
-        ctx.font = "17px MatrixFont";
+        ctx.font = "18px MatrixFont";
 
         for (let i = 0; i < drops.length; i++) {
           const text = charArray[Math.floor(Math.random() * charArray.length)];
