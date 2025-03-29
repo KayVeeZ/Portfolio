@@ -1,0 +1,11 @@
+body {
+	font-family: monospace;
+  }
+  
+.custom-green {
+	background-color: #20C20E;
+  }
+  
+  .custom-green:hover {
+	background-color: #1A9A0B;
+  }

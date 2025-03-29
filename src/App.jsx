@@ -8,7 +8,7 @@ function App() {
     <>
     <div style={{ position: 'absolute', width: '100vw', height: '100vh', zIndex: '-1'}}>
     <MatrixRainingCode/>
-    <button className="z-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Hello</button>
+    <button className="z-1 custom-green text-white font-bold py-2 px-4 rounded">Hello</button>
     </div>
     </>
   );
