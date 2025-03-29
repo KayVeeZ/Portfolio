@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MatrixRainingCode from './components/MatrixRainingCode';
 import './App.css';
+import './Cursors.css';
 
 function App() {
   return (

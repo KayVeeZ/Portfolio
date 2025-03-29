@@ -29,7 +29,7 @@ const MatrixRainingCode = () => {
       const draw = () => {
         ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
         ctx.fillRect(0, 0, width, height);
-        ctx.font = "15px MatrixFont";
+        ctx.font = "17px MatrixFont";
 
         for (let i = 0; i < drops.length; i++) {
           const text = charArray[Math.floor(Math.random() * charArray.length)];
@@ -48,7 +48,7 @@ const MatrixRainingCode = () => {
           if (y + 20 >= height || drops[i] === 1) {
             ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`; // White for last character
           } else {
-            ctx.fillStyle = "#0f0"; // Green for others
+            ctx.fillStyle = "#20C20E"; // Green for others
           }
 
           ctx.fillText(text, x, y);
