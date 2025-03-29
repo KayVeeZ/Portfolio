@@ -12,7 +12,12 @@ const MatrixRainingCode = () => {
     let columns = Math.floor(width / 20);
     const characters = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|{}<>[]^~`;
     const charArray = characters.split("");
-    let drops = Array(columns).fill(1);
+    
+    let streams = Array.from({ length: columns }, () => ({
+      chars: [],
+      y: 0
+    }));
+
     let frameRate = 25;
     let lastFrameTime = Date.now();
 
@@ -24,36 +29,47 @@ const MatrixRainingCode = () => {
     };
 
     loadFont().then(() => {
-      ctx.font = "15px MatrixFont";
+      ctx.font = "18px MatrixFont";
 
       const draw = () => {
         ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
         ctx.fillRect(0, 0, width, height);
         ctx.font = "18px MatrixFont";
 
-        for (let i = 0; i < drops.length; i++) {
-          const text = charArray[Math.floor(Math.random() * charArray.length)];
-          const x = i * 20;
-          const y = drops[i] * 20;
+        streams.forEach((stream, i) => {
+          // Add a new character at the top of the stream
+          const newChar = charArray[Math.floor(Math.random() * charArray.length)];
+          stream.chars.unshift({ char: newChar, opacity: 1 }); // Most recent char
 
-          // Calculate opacity for last 6 characters
-          let index = Math.floor(y / 20);
-          let opacity = index < 6 ? 0.1 + index * 0.15 : 1;
-
-          if (drops[i] * 20 > height || Math.random() > 0.975) {
-            drops[i] = 0;
+          // Limit stream length (adjustable)
+          if (stream.chars.length > 20) {
+            stream.chars.pop(); // Remove old chars
           }
 
-          // Set color and opacity
-          if (y + 20 >= height || drops[i] === 1) {
-            ctx.fillStyle = `rgba(255, 255, 255, ${opacity})`; // White for last character
-          } else {
-            ctx.fillStyle = "#20C20E"; // Green for others
-          }
+          // Draw characters in the stream
+          stream.chars.forEach((charObj, index) => {
+            const x = i * 20;
+            const y = stream.y - index * 20;
 
-          ctx.fillText(text, x, y);
-          drops[i]++;
-        }
+            if (y < 0) return; // Don't draw above the screen
+
+            // Newest character is white
+            ctx.fillStyle = index === 0 ? "#fff" : `rgba(0, 255, 0, ${charObj.opacity})`;
+            ctx.fillText(charObj.char, x, y);
+
+            // Gradually fade older characters
+            if (index > 0) charObj.opacity *= 0.85;
+          });
+
+          // Move the stream down
+          stream.y += 20;
+
+          // Reset stream randomly
+          if (stream.y > height && Math.random() > 0.975) {
+            stream.y = 0;
+            stream.chars = [];
+          }
+        });
       };
 
       const animate = () => {
@@ -72,7 +88,10 @@ const MatrixRainingCode = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
       columns = Math.floor(width / 20);
-      drops = Array(columns).fill(1);
+      streams = Array.from({ length: columns }, () => ({
+        chars: [],
+        y: 0
+      }));
     };
 
     window.addEventListener("resize", handleResize);

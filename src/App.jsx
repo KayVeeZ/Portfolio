@@ -21,12 +21,12 @@ function App() {
       <Navbar />
 
       {/* Main content fades in */}
-      <div className="flex-grow flex justify-center items-center custom-green">
+      <div className="flex-grow flex justify-center items-center custom-green space-x-4">
         <p className="text-6xl">👋</p>
-        <button className="flex z-1 custom-green-bg text-white font-bold py-2 px-4 rounded">
-          Hello
+        <button className="text-6xl custom-green-bg text-white font-bold py-2 px-4 rounded">
+        I'm
         </button>
-        <p className="text-6xl">I'm KSHITIJ.</p>
+        <p className="text-6xl custom-outline-white">KSHITIJ</p><p className=" text-white text-6xl custom-outline-green">VASHISTH</p><p className=" text-amber-500 text-6xl custom-outline-white">!</p>
       </div>
 
       {/* Footer fades in */}

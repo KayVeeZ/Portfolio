@@ -13,3 +13,11 @@ body {
   .custom-green-bg:hover {
 	background-color: #1A9A0B;
   }
+
+  .custom-outline-white {
+    -webkit-text-stroke: 0.5px white; /* Adjust thickness & color */
+  }
+
+  .custom-outline-green {
+    -webkit-text-stroke: 0.5px #20C20E; /* Adjust thickness & color */
+  }
