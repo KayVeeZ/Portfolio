@@ -2,10 +2,14 @@ body {
 	font-family: monospace;
   }
   
-.custom-green {
+.custom-green-bg {
 	background-color: #20C20E;
   }
+
+.custom-green {
+  color: #20C20E;
+}  
   
-  .custom-green:hover {
+  .custom-green-bg:hover {
 	background-color: #1A9A0B;
   }
