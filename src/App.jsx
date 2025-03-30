@@ -31,7 +31,11 @@ function App() {
         </div>
 
         <div class="slide-in-fade text-2xl font-bold uppercase">
-          <span className='curZur color-switch'>Hire Me</span>
+          <span className='curZur color-switch'>
+            <a href="mailto:kshitijvashisth@gmail.com?subject=Let's%20collaborate%20on%20a%20project&body=Hello Mr. Kshitij Vashisth, I'm reaching out to you because...">
+            Hire Me
+            </a>
+            </span>
         </div>
 
       </div>
