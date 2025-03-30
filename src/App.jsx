@@ -35,7 +35,7 @@ function App() {
         </div>
 
         <div className="slide-in-fade">
-         <span className="curZur">Aloo Kanda</span>
+         <span className="curZur">Test Button</span>
         </div>
 
       </div>
