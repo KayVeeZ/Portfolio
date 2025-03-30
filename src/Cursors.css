@@ -1,7 +1,7 @@
 /* Apply custom cursor globally and for all states */
 html, body, *, button, a, input,
 .disabled, a:disabled, input:disabled {
-  cursor: url('/cursors/idle.svg'), auto;
+  cursor: url('/cursors/idle3.svg'), auto;
 }
 
 button:hover, a:hover, input:hover, .hover:hover {
