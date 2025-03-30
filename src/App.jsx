@@ -31,7 +31,7 @@ function App() {
         </div>
 
         <div class="slide-in-fade">
-          <span className='curZur'>Hire Me</span>
+          <span className='curZur color-switch'>Hire Me</span>
         </div>
 
         <div className="slide-in-fade">
