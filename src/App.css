@@ -35,7 +35,7 @@ body {
   margin-top: 1.5rem; /* Equivalent to mt-6 */
   opacity: 1;
   display: inline-block;
-  cursor: url('/cursors/cursor-pointer.svg'), auto;
+  cursor: url('/cursors/cursor-pointer2.svg'), auto;
   user-select: none;
 }
 

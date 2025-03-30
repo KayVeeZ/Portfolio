@@ -34,10 +34,6 @@ function App() {
           <span className='curZur color-switch'>Hire Me</span>
         </div>
 
-        <div className="slide-in-fade text-2xl font-semibold">
-         <span className="curZur">Test Button</span>
-        </div>
-
       </div>
 
       {/* Footer fades in */}
