@@ -7,4 +7,9 @@ html, body, *, button, a, input,
 button:hover, a:hover, input:hover, .hover:hover {
 	cursor: url('/cursors/cursor-pointer.svg'), auto;
   }
+
+  .curZur {
+    cursor: url('/cursors/cursor-pointer.svg'), auto;
+    user-select: none;
+  }
   
