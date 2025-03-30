@@ -20,21 +20,21 @@ function App() {
 
       {/* Main content fades in */}
       <div className="flex-grow flex flex-col justify-center items-center custom-green space-y-6">
-        <div className="flex space-x-4">
-          <p className="text-6xl">👋</p>
-          <button className="text-6xl custom-green-bg text-white font-bold py-2 px-4 rounded">
-            I'm
-          </button>
-          <p className="text-6xl custom-outline-white">KSHITIJ</p>
-          <p className="text-white text-6xl custom-outline-green">VASHISTH</p>
-          <p className="text-amber-500 text-6xl custom-outline-white">!</p>
+        <div className="text-6xl flex space-x-4">
+          <p>👋</p>
+          <div className="custom-green-bg text-white px-4 rounded">
+            I'M
+          </div>
+          <p className="custom-outline-white font-bold">KSHITIJ</p>
+          <p className="text-white custom-outline-green font-bold">VASHISTH</p>
+          <p className="text-amber-500 custom-outline-white">!</p>
         </div>
 
-        <div class="slide-in-fade">
+        <div class="slide-in-fade text-2xl font-bold uppercase">
           <span className='curZur color-switch'>Hire Me</span>
         </div>
 
-        <div className="slide-in-fade">
+        <div className="slide-in-fade text-2xl font-semibold">
          <span className="curZur">Test Button</span>
         </div>
 
