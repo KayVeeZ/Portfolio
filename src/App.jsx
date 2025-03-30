@@ -27,7 +27,7 @@ function App() {
           </div>
           <p className="custom-outline-white font-bold">KSHITIJ</p>
           <p className="text-white custom-outline-green font-bold">VASHISTH</p>
-          <p className="text-amber-500 custom-outline-white">!</p>
+          <p className="text-[#20C20E] custom-outline-white">!</p>
         </div>
 
         <div class="slide-in-fade text-2xl font-bold uppercase">
