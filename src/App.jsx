@@ -19,7 +19,7 @@ function App() {
       <Navbar />
 
       {/* Main content fades in */}
-      <div className="flex-grow flex flex-col justify-center items-center custom-green space-y-6">
+      <div className="flex-grow flex flex-col justify-center items-center custom-green space-y-6 select-none">
         <div className="text-6xl flex space-x-4">
           <p>👋</p>
           <div className="custom-green-bg text-white px-4 rounded">
