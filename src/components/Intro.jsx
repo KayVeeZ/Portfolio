@@ -7,10 +7,10 @@ const Intro = () => {
             {/* Intro Card */}
             <div className="flex justify-center items-center w-full">
                 {/* Card */}
-                <div className="bg-white/10 border border-white/10 rounded-2xl shadow-lg overflow-hidden max-w-3xl p-6 backdrop-blur-md">
+                <div className="translucent-container p-6">
                  
                     <p className="text-xl text-left">
-                        Hi! I'm Kshitij Vashisth. A passionate Full-Stack Developer eager to build high-performance, scalable, and user-friendly web applications. Always excited to learn, adapt, and bring creative solutions to life! 🚀
+                        Hi! I'm a passionate Full-Stack Developer eager to build high-performance, scalable, and user-friendly web applications. Always excited to learn, adapt, and bring creative solutions to life! 🚀
                     </p>
                 </div>
             </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-      <ul className="group flex items-center justify-center gap-2 px-3 py-2 bg-white/10 border border-white/10 rounded-2xl backdrop-blur-md shadow-md">
+      <ul className="group flex items-center justify-center gap-2 px-3 py-2 bg-black rounded-2xl backdrop-blur-md shadow-md">
         {[
           { name: "Home", link: "/" },
           { name: "Work", link: "/project" },
