@@ -10,7 +10,7 @@ const Intro = () => {
                 <div className="translucent-container p-6">
                  
                     <p className="text-xl text-left">
-                        Hi! I'm a passionate Full-Stack Developer eager to build high-performance, scalable, and user-friendly web applications. Always excited to learn, adapt, and bring creative solutions to life! 🚀
+                    🚀 A Full-Stack Developer passionate about crafting fast ⚡, scalable 📈, and user-friendly 🎨 apps. I always enjoy learning 📚, building 🛠️, and innovating 💡! ✨
                     </p>
                 </div>
             </div>
