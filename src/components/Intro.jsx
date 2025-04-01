@@ -11,12 +11,13 @@ const Intro = () => {
                     <p className="text-xl text-left">
                         Hi! I'm Kshitij Vashisth. A passionate Full-Stack Developer eager to build high-performance, scalable, and user-friendly web applications. Always excited to learn, adapt, and bring creative solutions to life! 🚀
                     </p>
-
-                    {/* Centered "Hire Me" Button Inside the Card */}
-                    <div className="flex justify-center">
-                        <HireMe />
-                    </div>
                 </div>
+            </div>
+
+            
+            {/* Centered "Hire Me" Button Inside the Card */}
+            <div className="flex justify-center">
+                <HireMe />
             </div>
         </>
     )

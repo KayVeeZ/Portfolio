@@ -21,12 +21,9 @@ function App() {
       <Navbar />
 
       {/* Main content fades in */}
-      <div className="flex-grow flex flex-col justify-center items-center custom-green space-y-6 select-none">
+      <div className="flex-grow flex flex-col justify-center items-center custom-green select-none">
         <Headline />
-
         <Intro />
-
-
       </div>
 
       {/* Footer fades in */}
