@@ -1,8 +1,10 @@
-body {
-  @font-face {
-    font-family: myFirstFont;
-    src: url(/fonts/NeuePlak-NarrowRegular.woff);
-  }
+@font-face {
+  font-family: 'myFirstFont';
+  src: url("/fonts/Neue-Plak-Regular.ttf") format("truetype");
+}
+
+.font-custom {
+  font-family: 'myFirstFont';
 }
 
 .custom-green-bg {
@@ -18,21 +20,27 @@ body {
 }
 
 .custom-outline-white {
-  -webkit-text-stroke: 0.5px white; /* Adjust thickness & color */
+  -webkit-text-stroke: 0.5px white;
+  /* Adjust thickness & color */
 }
 
 .custom-outline-green {
-  -webkit-text-stroke: 0.5px #20C20E; /* Adjust thickness & color */
+  -webkit-text-stroke: 0.5px #20C20E;
+  /* Adjust thickness & color */
 }
 
 .slide-in-fade {
   position: relative;
   overflow: hidden;
-  padding: 0.75rem 2rem; /* Equivalent to px-8 py-3 */
-  border-radius: 0.5rem; /* Equivalent to rounded */
-  background-color: #20C20E; /* Equivalent to bg-gray-800 */
+  padding: 0.75rem 2rem;
+  /* Equivalent to px-8 py-3 */
+  border-radius: 0.5rem;
+  /* Equivalent to rounded */
+  background-color: #20C20E;
+  /* Equivalent to bg-gray-800 */
   color: black;
-  margin-top: 1.5rem; /* Equivalent to mt-6 */
+  margin-top: 1.5rem;
+  /* Equivalent to mt-6 */
   opacity: 1;
   display: inline-block;
   cursor: url('/cursors/cursor-pointer2.svg'), auto;
@@ -46,7 +54,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white; /* Green wave */
+  background-color: white;
+  /* Green wave */
   transition: top 0.5s ease-in-out;
   pointer-events: none;
 }
@@ -65,7 +74,19 @@ body {
 }
 
 @keyframes colorSwitch {
-  0% { color: #000; }   /* Black */
-  50% { color: #20C20E; }  /* Matrix green */
-  100% { color: #000; } /* Back to Black */
+  0% {
+    color: #000;
+  }
+
+  /* Black */
+  50% {
+    color: #20C20E;
+  }
+
+  /* Matrix green */
+  100% {
+    color: #000;
+  }
+
+  /* Back to Black */
 }
