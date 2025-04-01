@@ -17,7 +17,7 @@ const Navbar = () => {
           <motion.li key={index} whileHover={{ scale: 1.1 }}>
             <a
               href={item.link}
-              className="px-4 py-1.5 text-sm font-light text-white/70 transition-all duration-300 hover:text-white/85 rounded-2xl"
+              className="px-4 py-1.5 text-sm font-light text-[#20C20E] transition-all duration-300 hover:text-[#1A9A0B] rounded-2xl"
             >
               {item.name}
             </a>
@@ -27,14 +27,14 @@ const Navbar = () => {
         <motion.li whileHover={{ scale: 1.1 }}>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="px-4 py-1.5 text-sm font-light text-white/70 transition-all duration-300 hover:text-white/85"
+            className="px-4 py-1.5 text-sm font-light text-[#20C20E] transition-all duration-300 hover:text-[#1A9A0B]"
           >
             More
           </button>
         </motion.li>
         {/* Call to Action Button */}
         <motion.li whileHover={{ scale: 1.1 }}>
-          <button className="relative px-4 py-1.5 text-sm font-light bg-white/10 text-white/70 transition-all duration-300 hover:bg-white/15 hover:text-white/90 rounded-2xl">
+          <button className="relative px-4 py-1.5 text-sm font-light bg-white/10 text-[#20C20E] transition-all duration-300 hover:bg-white/15 hover:text-[#1A9A0B] rounded-2xl">
             Book a Call
             <div className="absolute bottom-0 h-1/3 w-full -translate-x-4 rounded-2xl bg-white opacity-30 blur-sm"></div>
           </button>

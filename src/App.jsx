@@ -27,7 +27,8 @@ function App() {
       </div>
 
       {/* Footer fades in */}
-      <Footer />
+      <Footer className="w-full flex justify-center" />
+
     </div>
   );
 }
