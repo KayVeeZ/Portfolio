@@ -12,8 +12,9 @@ const Brain = () => {
   // Track the mouse movement to update the x position
   useEffect(() => {
     const handleMouseMove = (event) => {
-      const mouseX = (event.clientX / window.innerWidth) * 2 - 1; // Normalize to [-1, 1]
-      setMouseX(mouseX); // Set the mouse position to state
+      // Get mouse position relative to window width
+      const mousePos = (event.clientX / window.innerWidth) * 2 - 1; // Normalize to [-1, 1]
+      setMouseX(mousePos); // Store the normalized mouse position
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -26,19 +27,23 @@ const Brain = () => {
   // Set the scale of the brain
   useEffect(() => {
     if (scene) {
-      scene.scale.set(2, 2, 2); // Adjust scale to make the brain larger
+      scene.scale.set(4, 4, 4); // Adjust scale to make the brain larger
     }
   }, [scene]);
 
   // Rotate the brain based on mouse position with clamped boundaries
   useFrame(() => {
     if (brainRef.current) {
-      const rotationLimit = Math.PI / 2; // 90 degrees in radians
+      // Define rotation limits (in radians)
+      const rotationLimit = Math.PI / 4; // 45 degrees in radians
+
+      // Mapping the mouseX from [-1, 1] to [-rotationLimit, rotationLimit] and clamp it
       const rotationValue = THREE.MathUtils.lerp(
         brainRef.current.rotation.y,
-        THREE.MathUtils.clamp(mouseX * rotationLimit, -rotationLimit, rotationLimit),
-        0.1
+        THREE.MathUtils.clamp(mouseX * rotationLimit, -rotationLimit, rotationLimit), // Clamp between -45° to 45°
+        0.05 // Slow down the speed of rotation for smoother effect
       );
+
       brainRef.current.rotation.y = rotationValue; // Apply the clamped rotation
     }
   });

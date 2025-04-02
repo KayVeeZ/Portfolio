@@ -29,7 +29,7 @@ function App() {
           <Headline />
           <Intro />
         </div>
-        <div className="flex-grow flex flex-col justify-center items-center custom-green select-none ml-2 mr-[5.5vw] bg-white">
+        <div className="flex-grow flex flex-col justify-center items-center custom-green select-none mr-[5.5vw]">
           <BrainCanvas />
         </div>
       </section>
