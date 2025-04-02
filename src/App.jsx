@@ -6,7 +6,7 @@ import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Headline from './components/Headline';
 import Projects from './components/Projects';
-import Brain from './components/Brain';
+import BrainCanvas from './components/BrainCanvas';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,7 +30,7 @@ function App() {
           <Intro />
         </div>
         <div className="flex-grow flex flex-col justify-center items-center custom-green select-none ml-2 mr-[5.5vw] bg-white">
-          <Brain />
+          <BrainCanvas />
         </div>
       </section>
       <section className='bg-red-700 min-h-[100vh]'>
