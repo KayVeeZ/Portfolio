@@ -55,9 +55,8 @@ function App() {
 
       </section>
       <section className="my-[5vh] flex flex-col h-auto items-center">
-        <StreamerText className="mt-5" texts={["Hello", " * ", "Welcome", " * ", "React", " * ", "Streamer!"]} direction={1} />
-        <br/>
-        <StreamerText className="mb-5" texts={["Reverse", " * ", "Scrolling", " * ", "Effect!"]} direction={-1} />
+        <StreamerText texts={[" Hello ", " Welcome ", " React ", " Streamer! "]} direction={1} speed={0.8} />
+        <StreamerText texts={[" Reverse ", " Scrolling ", " Effect! "]} direction={-1} speed={0.8} />
       </section>
       {/* Projects Section */}
       <section className="h-auto flex items-center justify-center">
