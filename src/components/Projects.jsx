@@ -1,5 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
+import '../ProjectCarousel.css'
+
 import project2 from "../assets/projectImages/kvzCareers.png";
 import project1 from "../assets/projectImages/solarly.png";
 import project3 from "../assets/projectImages/gitUploadAutomation.png";
