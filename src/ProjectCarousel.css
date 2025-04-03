@@ -1,124 +1,97 @@
+/* --- Ensure the carousel stays within bounds --- */
 .projects-container {
+  position: relative;
+  width: 90%; /* Adjust width as needed */
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
+  margin: auto;
+  padding: 20px 0;
+  overflow: hidden;
 }
 
+/* Make sure the slides have a fixed size and spacing */
 .project-slide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  position: relative;
-  /* Ensure child absolute elements are positioned correctly */
-  overflow: hidden;
-  /* Prevent any unwanted overflow issues */
+  justify-content: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 10px; /* Add space between slides */
 }
 
-.project-slide img {
+.project-image {
   width: 100%;
-  max-height: 550px;
-  /* Prevents excessive height */
+  height: 250px; /* Fixed height */
   object-fit: contain;
-  /* Ensures full visibility without cropping */
+  border-radius: 10px;
 }
 
-.project-info {
+/* --- Modal Styling --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dimmed background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* Ensure it's above everything */
+}
+
+.modal-content {
+  background: black;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  /* Centering */
-  width: 80%;
+  border-radius: 10px;
   text-align: center;
+  width: 70%;
+  max-width: 1080px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-close {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background: darkred;
+}
+
+/* Prevent scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* scroller colors */
+
+/* Custom scrollbar for the modal */
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Dark background */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #20C20E; /* Green scrollbar */
   border-radius: 5px;
 }
 
-/* Titles and descriptions */
-.project-info h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #1A9A0B; /* Darker green on hover */
 }
-
-.project-info p {
-  font-size: 1rem;
-}
-
-/* Slider Navigation */
-.slick-prev,
-.slick-next {
-  color: white;
-  font-size: 2rem;
-  width: 40px;
-  height: 40px;
-  z-index: 100;
-  /* Ensure they appear above other elements */
-  cursor: url('/cursors/cursor-pointer2.svg'), auto;
-}
-
-/* Dots styling */
-.slick-dots {
-  bottom: -30px;
-}
-
-.slick-dots li button {
-  z-index: 101;
-  border-radius: 50%;
-  /* Make them round */
-  color: #fff;
-  /* Set dot color */
-  cursor: url('/cursors/cursor-pointer2.svg'), auto;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #20C20E;
-  /* Active dot color (green in this case) */
-}
-
-.slick-dots li button:before {
-  font-size: 14px;
-  border-radius: 50%;
-  /* Make them round */
-  cursor: url('/cursors/cursor-pointer2.svg'), auto;
-}
-
-/* Prevent slide content from getting cut off */
-.slick-slide>div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.slick-dots li:not(.slick-active) button:before {
-  color: #1A9A0B;
-  /* Color for inactive dots (light gray in this case) */
-}
-
-
-
-.slick-prev::before,
-.slick-next::before {
-  font-size: 30px;
-  /* Adjust size */
-  color: #1A9A0B;
-  /* Set color */
-}
-
-.slick-prev,
-.slick-next {
-  color: transparent;
-  /* Hide any unwanted text */
-}
-
-.slick-prev:hover::before,
-.slick-next:hover::before {
-  color: #20C20E;
-  /* Make arrows visible on hover */
-  cursor: url('/cursors/cursor-pointer2.svg'), auto;
-}
-
