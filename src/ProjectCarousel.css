@@ -47,16 +47,32 @@
   .slick-prev, .slick-next {
     color: white;
     font-size: 2rem;
+    width: 40px;
+    height: 40px;
     z-index: 10;  /* Ensure they appear above other elements */
+    cursor: url('/cursors/cursor-pointer2.svg'), auto;
   }
   
   /* Dots styling */
   .slick-dots {
     bottom: -30px;
   }
+
+  .slick-dots li button {
+    border-radius: 50%;/* Make them round */
+    color: #fff; /* Set dot color */
+    cursor: url('/cursors/cursor-pointer2.svg'), auto;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #20C20E; /* Active dot color (green in this case) */
+}
   
   .slick-dots li button:before {
-    color: white;
+    font-size: 14px;
+    border-radius: 50%;/* Make them round */
+    color: #20C20E;
+    cursor: url('/cursors/cursor-pointer2.svg'), auto;
   }
   
   /* Prevent slide content from getting cut off */
@@ -66,3 +82,25 @@
     align-items: center;
     height: 100%;
   }
+
+
+
+
+  
+  .slick-prev::before,
+  .slick-next::before {
+    font-size: 30px;  /* Adjust size */
+    color: white;      /* Set color */
+  }
+  
+  .slick-prev,
+  .slick-next {
+    color: transparent;  /* Hide any unwanted text */
+  }
+  
+  .slick-prev:hover::before,
+  .slick-next:hover::before {
+    color: #ffffff; /* Make arrows visible on hover */
+    cursor: url('/cursors/cursor-pointer2.svg'), auto;
+  }
+  
