@@ -7,6 +7,7 @@ import Intro from './components/Intro';
 import Headline from './components/Headline';
 import Projects from './components/Projects';
 import BrainCanvas from './components/BrainCanvas';
+import StreamerText from './components/StreamerText';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,7 +33,10 @@ function App() {
       <div className="flex flex-col justify-center items-center">
       {/* Navbar */}
       <Navbar />
+      <StreamerText texts={["Hello","*", "Welcome","*", "React","*", "Streamer!"]} direction={1} />
+      <StreamerText texts={["Reverse","*", "Scrolling","*", "Effect!"]} direction={-1} />
       </div>
+      
 
       {/* Main Section */}
       <section className="mt-[10vh] flex h-auto items-center">
@@ -41,17 +45,21 @@ function App() {
           <Headline />
           <Intro />
         </div>
-
+        
+      
         {/* Right column with BrainCanvas (Only on Desktop) */}
         {isDesktop && (
           <div className="h-[50vh] rounded-3xl translucent-container mt-10 mb-5 ml-8 flex-grow flex flex-col justify-center items-center custom-green select-none mr-[5.5vw]">
             <BrainCanvas />
           </div>
+          
         )}
+        
       </section>
-
+        
       {/* Projects Section */}
       <section className="h-auto flex items-center justify-center">
+        
 
         <Projects className="curZur"/>
       </section>
