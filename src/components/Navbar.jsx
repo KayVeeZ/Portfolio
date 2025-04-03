@@ -11,15 +11,15 @@ const Navbar = () => {
       <ul className="group flex items-center justify-center gap-2 px-3 py-2 bg-black rounded-2xl backdrop-blur-md shadow-md">
         <a
           href="https://github.com/KayVeeZ" target="_blank"
-          className="scale-150 px-4 py-1.5 text-sm font-light text-[#20C20E] transition-all duration-300 hover:text-[#1A9A0B] rounded-2xl"
+          className="scale-200 px-4 py-1.5 text-sm font-light text-[#20C20E] transition-all duration-300 hover:text-[#1A9A0B] rounded-2xl"
         >
-          <FaGithub />
+          <FaGithub className="curZur"/>
         </a>
         <a
           href="https://linkedin.com/in/kshitijvashisth" target="_blank"
-          className="scale-150 px-4 py-1.5 text-sm font-light text-[#20C20E] transition-all duration-300 hover:text-[#1A9A0B] rounded-2xl"
+          className="scale-200 px-4 py-1.5 text-sm font-light text-[#20C20E] transition-all duration-300 hover:text-[#1A9A0B] rounded-2xl"
         >
-          <FaLinkedin />
+          <FaLinkedin className="curZur" />
         </a>
       </ul>
     </nav>
