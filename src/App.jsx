@@ -49,7 +49,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="">
+      <section className="min-h-[100vh] flex">
         <Projects />
       </section>
 

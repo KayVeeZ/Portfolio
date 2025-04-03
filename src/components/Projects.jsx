@@ -6,6 +6,7 @@ import project2 from "../assets/projectImages/kvzCareers.png";
 import project1 from "../assets/projectImages/solarly.png";
 import project3 from "../assets/projectImages/gitUploadAutomation.png";
 import project4 from "../assets/projectImages/blockSnake.png";
+import { Center } from '@react-three/drei';
 
 
 const projects = [
@@ -59,7 +60,7 @@ const Projects = () => {
               src={project.image}
               alt={project.title}
               className="project-image"
-              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              style={{ width: '80%', height: '100%', objectFit: 'contain', marginLeft: '10%', marginRight: '10%' }}
             />
             <div className="project-info">
               <h3 className="text-xl font-semibold">{project.title}</h3>
