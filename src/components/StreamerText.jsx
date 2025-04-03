@@ -30,7 +30,7 @@ const StreamerText = ({ texts, direction = 1 }) => {
   }, [direction, textWidth]);
 
   return (
-    <div ref={containerRef} className="relative w-full overflow-hidden bg-black flex items-center">
+    <div ref={containerRef} className="relative w-full custom-green overflow-hidden text-xl bg-black flex items-center">
       <div
         ref={textRef}
         className="flex"

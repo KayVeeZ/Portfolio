@@ -31,37 +31,39 @@ function App() {
       className={`select-none font-custom flex flex-col min-h-screen justify-between text-white transition-all duration-700 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
       <div className="flex flex-col justify-center items-center">
-      {/* Navbar */}
-      <Navbar />
-      <StreamerText texts={["Hello","*", "Welcome","*", "React","*", "Streamer!"]} direction={1} />
-      <StreamerText texts={["Reverse","*", "Scrolling","*", "Effect!"]} direction={-1} />
+        {/* Navbar */}
+        <Navbar />
       </div>
-      
+
 
       {/* Main Section */}
-      <section className="mt-[10vh] flex h-auto items-center">
+      <section className="mt-[5vh] flex h-auto items-center">
         {/* Left column with Headline and Intro */}
         <div className={`flex-grow flex flex-col justify-center items-center custom-green ${isDesktop ? 'ml-[5.5vw]' : 'mb-10'}`}>
           <Headline />
           <Intro />
         </div>
-        
-      
+
+
         {/* Right column with BrainCanvas (Only on Desktop) */}
         {isDesktop && (
           <div className="h-[50vh] rounded-3xl translucent-container mt-10 mb-5 ml-8 flex-grow flex flex-col justify-center items-center custom-green select-none mr-[5.5vw]">
             <BrainCanvas />
           </div>
-          
+
         )}
-        
+
       </section>
-        
+      <section className="my-[5vh] flex flex-col h-auto items-center">
+        <StreamerText className="mt-5" texts={["Hello", " * ", "Welcome", " * ", "React", " * ", "Streamer!"]} direction={1} />
+        <br/>
+        <StreamerText className="mb-5" texts={["Reverse", " * ", "Scrolling", " * ", "Effect!"]} direction={-1} />
+      </section>
       {/* Projects Section */}
       <section className="h-auto flex items-center justify-center">
-        
 
-        <Projects className="curZur"/>
+
+        <Projects className="curZur" />
       </section>
 
       {/* Footer */}
