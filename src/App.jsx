@@ -53,7 +53,7 @@ function App() {
       {/* Projects Section */}
       <section className="h-auto flex items-center justify-center">
 
-        <Projects />
+        <Projects className="curZur"/>
       </section>
 
       {/* Footer */}

@@ -55,6 +55,10 @@
   user-select: none;
 }
 
+.slide-in-fade:hover{
+  border: 3px solid #20C20E;
+}
+
 .slide-in-fade::before {
   content: "";
   position: absolute;
