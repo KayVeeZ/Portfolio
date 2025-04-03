@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import BrainCanvas from './components/BrainCanvas';
 import StreamerText from './components/StreamerText';
 import IconSphere from './components/IconSphere';
+import PersonalInfo from './components/PersonalInfo';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -76,14 +77,17 @@ function App() {
       </section>
 
       {/* Tech Stack Section */}
-      <section className="h-auto flex items-center justify-center">
-      <div style={{  overflow: 'hidden' }}>
-      <IconSphere />
-    </div>
+      <section className="h-auto grid grid-cols-2 items-center justify-center">
+        <div className='flex justify-center items-center flex-col' style={{ overflow: 'hidden' }}>
+          <IconSphere />
+        </div>
+        <div className='flex justify-center items-center flex-col'>
+          <PersonalInfo/>
+        </div>
       </section>
       <section className="h-auto flex items-center justify-center">
-      {/* Footer */}
-      <Footer className="w-full flex justify-center" />
+        {/* Footer */}
+        <Footer className="w-full flex justify-center" />
       </section>
     </div>
   );
