@@ -7,23 +7,23 @@ const StreamerText = ({ texts, direction = 1, speed = 1.2 }) => {
   const [offset, setOffset] = useState(0);
   const [textWidth, setTextWidth] = useState(0);
 
-  // Add a single bullet point after each string
-  const sandwichedText = texts.map((text) => `${text} •`).join("\u00A0");
+  // Add a single white bullet point after each string
+  const sandwichedText = texts.map((text) => `${text} <span class="text-white">•</span>`).join("\u00A0");
 
   const repeatedText = Array(50).fill(sandwichedText).join("\u00A0");
 
   useEffect(() => {
     if (textRef.current) {
-      setTextWidth(textRef.current.scrollWidth / 2); // Get full text width
+      setTextWidth(textRef.current.scrollWidth / 2);
     }
   }, []);
 
   useEffect(() => {
     const handleScroll = (event) => {
       setOffset((prev) => {
-        let newOffset = prev + event.deltaY * 0.5 * direction * speed; // Adjust scroll speed
-        if (newOffset > textWidth) return newOffset - textWidth; // Wrap around for forward scroll
-        if (newOffset < 0) return textWidth + newOffset; // Wrap for reverse scroll
+        let newOffset = prev + event.deltaY * 0.5 * direction * speed;
+        if (newOffset > textWidth) return newOffset - textWidth;
+        if (newOffset < 0) return textWidth + newOffset;
         return newOffset;
       });
     };
@@ -38,12 +38,11 @@ const StreamerText = ({ texts, direction = 1, speed = 1.2 }) => {
         ref={textRef}
         className="flex text-2xl font-bold custom-green transition-all ease-in-out duration-300"
         style={{
-          transform: `translateX(${-offset}px)`, // Apply the scrolling effect via transform
+          transform: `translateX(${-offset}px)`,
           whiteSpace: "nowrap",
         }}
-      >
-        {repeatedText}
-      </motion.div>
+        dangerouslySetInnerHTML={{ __html: repeatedText }}
+      />
     </div>
   );
 };
