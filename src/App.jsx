@@ -29,11 +29,13 @@ function App() {
     <div
       className={`font-custom flex flex-col min-h-screen justify-between text-white transition-all duration-700 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
+      <div className="flex flex-col justify-center items-center">
       {/* Navbar */}
-      <Navbar className="fixed top-10" />
+      <Navbar />
+      </div>
 
       {/* Main Section */}
-      <section className="min-h-[100vh] flex">
+      <section className="min-h-screen flex">
         {/* Left column with Headline and Intro */}
         <div className={`flex-grow flex flex-col justify-center items-center custom-green select-none ${isDesktop ? 'ml-[5.5vw]' : 'mb-10'}`}>
           <Headline />
@@ -42,14 +44,15 @@ function App() {
 
         {/* Right column with BrainCanvas (Only on Desktop) */}
         {isDesktop && (
-          <div className=" rounded-3xl translucent-container mt-20 mb-20 ml-8 flex-grow flex flex-col justify-center items-center custom-green select-none mr-[5.5vw]">
+          <div className="rounded-3xl translucent-container mt-20 mb-20 ml-8 flex-grow flex flex-col justify-center items-center custom-green select-none mr-[5.5vw]">
             <BrainCanvas />
           </div>
         )}
       </section>
 
       {/* Projects Section */}
-      <section className="min-h-[100vh] flex">
+      <section className="min-h-screen flex items-center justify-center">
+
         <Projects />
       </section>
 
