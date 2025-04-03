@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import project2 from "../assets/projectImages/kvzCareers.png";
 import project1 from "../assets/projectImages/solarly.png";
 import project3 from "../assets/projectImages/gitUploadAutomation.png";
+import project4 from "../assets/projectImages/blockSnake.png";
 
 
 const projects = [
@@ -20,6 +21,11 @@ const projects = [
     title: "Project Three",
     description: "Description of project three.",
     image: project3,
+  },
+  {
+    title: "Project Four",
+    description: "Description of project four.",
+    image: project4,
   },
   
 ];
@@ -39,10 +45,10 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h2 className="text-center text-3xl font-bold mb-8">My Projects</h2>
+      <h2 className="text-center text-3xl font-bold mb-8 custom-green">My Projects</h2>
       <Slider {...settings}>
         {projects.map((project, index) => (
-          <div key={index} className="project-slide">
+          <div key={index} className="project-slide rounded-2xl">
             <img
               src={project.image}
               alt={project.title}
