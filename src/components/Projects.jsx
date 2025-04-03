@@ -29,7 +29,7 @@ const projects = [
     description: "Description of project four.",
     image: project4,
   },
-  
+
 ];
 
 const Projects = () => {
@@ -47,7 +47,11 @@ const Projects = () => {
 
   return (
     <div className="projects-container">
-      <h2 className="text-center text-3xl font-bold mb-8 custom-green">My Projects</h2>
+      <div className='text-center'>
+        <h2 className="inline-block text-3xl font-bold mb-8 custom-green bg-black px-4 py-2">
+          My Projects
+        </h2>
+      </div>
       <Slider {...settings}>
         {projects.map((project, index) => (
           <div key={index} className="project-slide rounded-2xl">

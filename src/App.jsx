@@ -49,7 +49,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      <section className="bg-red-700 min-h-[100vh]">
+      <section className="">
         <Projects />
       </section>
 
