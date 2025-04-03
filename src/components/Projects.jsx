@@ -1,12 +1,12 @@
 import React from 'react';
-import Slider from 'react-slick';  // Import react-slick for the carousel
+import Slider from 'react-slick';
 
-// Sample project data
+
 const projects = [
   {
     title: "Project One",
     description: "Description of project one.",
-    image: "/path/to/image1.jpg",  // Add your images path here
+    image: "/path/to/image1.jpg",
   },
   {
     title: "Project Two",
@@ -18,7 +18,7 @@ const projects = [
     description: "Description of project three.",
     image: "/path/to/image3.jpg",
   },
-  // Add more projects as needed
+  
 ];
 
 const Projects = () => {
