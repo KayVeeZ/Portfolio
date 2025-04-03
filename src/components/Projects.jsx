@@ -28,6 +28,7 @@ const Projects = () => {
   const modalRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
     const handleWheel = (e) => {
@@ -35,13 +36,13 @@ const Projects = () => {
         e.preventDefault();
       }
     };
-
+    
     if (isHovered) {
       window.addEventListener("wheel", handleWheel, { passive: false });
     } else {
       window.removeEventListener("wheel", handleWheel);
     }
-
+    
     return () => window.removeEventListener("wheel", handleWheel);
   }, [isHovered]);
 
@@ -71,8 +72,8 @@ const Projects = () => {
   };
 
   return (
-    <div
-      className="projects-container"
+    <div 
+      className="projects-container" 
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onWheel={(e) => {
@@ -95,15 +96,22 @@ const Projects = () => {
       <Slider ref={sliderRef} {...settings}>
         {projects.map((project, index) => {
           const isActive = selectedProject === project;
+          const isHovering = hoveredIndex === index;
           return (
-            <div key={index} className="project-slide rounded-2xl" onClick={() => setSelectedProject(project)}>
+            <div 
+              key={index} 
+              className={`project-slide rounded-2xl transition-transform duration-500 ease-out ${isHovering ? 'scale-125' : 'scale-100'}`} 
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              onClick={() => setSelectedProject(project)}
+            >
               <img
                 src={project.image}
                 alt={project.title}
                 className="project-image"
               />
               <div className="project-info text-center p-4">
-                <h3 className="text-xl custom-green bg-black inline-block px-3 rounded-2xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl font-semibold">{project.title}</h3>
                 {isActive && <p className="text-gray-300">{project.description}</p>}
               </div>
             </div>
@@ -113,17 +121,17 @@ const Projects = () => {
 
       {selectedProject && (
         <div className="modal-overlay" onClick={() => setSelectedProject(null)}>
-          <div
-            className="modal-content expanded bg-black custom-green p-6 max-w-2xl mx-auto rounded-lg shadow-lg overflow-auto max-h-[80vh]"
-            onClick={(e) => e.stopPropagation()}
+          <div 
+            className="modal-content expanded bg-black text-white p-6 max-w-2xl mx-auto rounded-lg shadow-lg overflow-auto max-h-[80vh]" 
+            onClick={(e) => e.stopPropagation()} 
             ref={modalRef}
             onWheel={(e) => e.stopPropagation()} // Prevent background scroll
           >
             <img src={selectedProject.image} alt={selectedProject.title} className="modal-image w-full h-auto rounded-lg" />
             <h3 className="text-3xl font-bold mt-4">{selectedProject.title}</h3>
             <p className="mt-2 text-lg">{selectedProject.description}</p>
-            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-blue-400 hover:underline">View Project</a><br />
-            <button className="modal-close bg-[#20C20E] text-white px-4 py-2 mt-6 rounded-lg hover:bg-[#1A9A0B]" onClick={() => setSelectedProject(null)}>Close</button>
+            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-blue-400 hover:underline">View Project</a>
+            <button className="modal-close bg-red-600 text-white px-4 py-2 mt-6 rounded-lg hover:bg-red-800" onClick={() => setSelectedProject(null)}>Close</button>
           </div>
         </div>
       )}
