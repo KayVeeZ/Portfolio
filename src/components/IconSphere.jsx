@@ -29,7 +29,11 @@ const IconSphere = () => {
 
     const iconFiles = [
       'react.svg', 'nextjs-original.svg', 'nodejs-original.svg', 'docker-original.svg', 
-      'python-original.svg', 'git-original.svg' // REPLACE THIS WITH YOUR ACTUAL ICON FILENAMES
+      'python-original.svg', 'git-original.svg', 'express-original.svg', 'flask-original.svg',
+      'pytorch-original.svg', 'tensorflow-original.svg', 'pandas-original.svg',
+      'scikitlearn-original.svg','bootstrap-original.svg','tailwindcss-original.svg',
+      'github-original.svg', 'mongodb-original.svg', 'rabbitmq-original.svg', 'unity-original.svg',
+      'mysql-original.svg', 'bash-original.svg' // REPLACE THIS WITH YOUR ACTUAL ICON FILENAMES
     ];
 
     const textureLoader = new THREE.TextureLoader();
