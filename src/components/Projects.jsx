@@ -94,7 +94,7 @@ const Projects = () => {
                 className="project-image"
               />
               <div className="project-info text-center p-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl custom-green bg-black inline-block px-3 rounded-2xl font-semibold">{project.title}</h3>
                 {isActive && <p className="text-gray-300">{project.description}</p>}
               </div>
             </div>
@@ -114,7 +114,7 @@ const Projects = () => {
             <h3 className="text-3xl font-bold mt-4">{selectedProject.title}</h3>
             <p className="mt-2 text-lg">{selectedProject.description}</p>
             <a href={selectedProject.link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-blue-400 hover:underline">View Project</a><br />
-            <button className="modal-close bg-red-600 text-white px-4 py-2 mt-6 rounded-lg hover:bg-red-800" onClick={() => setSelectedProject(null)}>Close</button>
+            <button className="modal-close bg-[#20C20E] text-white px-4 py-2 mt-6 rounded-lg hover:bg-[#1A9A0B]" onClick={() => setSelectedProject(null)}>Close</button>
           </div>
         </div>
       )}

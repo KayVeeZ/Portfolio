@@ -60,15 +60,9 @@
 .modal-close {
   margin-top: 10px;
   padding: 8px 16px;
-  background: red;
-  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-.modal-close:hover {
-  background: darkred;
 }
 
 /* Prevent scrolling when modal is open */
