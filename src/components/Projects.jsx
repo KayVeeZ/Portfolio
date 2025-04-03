@@ -1,22 +1,25 @@
 import React from 'react';
 import Slider from 'react-slick';
+import project2 from "../assets/projectImages/kvzCareers.png";
+import project1 from "../assets/projectImages/solarly.png";
+import project3 from "../assets/projectImages/gitUploadAutomation.png";
 
 
 const projects = [
   {
     title: "Project One",
     description: "Description of project one.",
-    image: "/path/to/image1.jpg",
+    image: project1,
   },
   {
     title: "Project Two",
     description: "Description of project two.",
-    image: "/path/to/image2.jpg",
+    image: project2,
   },
   {
     title: "Project Three",
     description: "Description of project three.",
-    image: "/path/to/image3.jpg",
+    image: project3,
   },
   
 ];
@@ -44,7 +47,7 @@ const Projects = () => {
               src={project.image}
               alt={project.title}
               className="project-image"
-              style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
             <div className="project-info">
               <h3 className="text-xl font-semibold">{project.title}</h3>
