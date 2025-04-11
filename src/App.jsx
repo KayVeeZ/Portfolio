@@ -10,6 +10,7 @@ import BrainCanvas from './components/BrainCanvas';
 import StreamerText from './components/StreamerText';
 import IconSphere from './components/IconSphere';
 import PersonalInfo from './components/PersonalInfo';
+import MatrixRainingCode from './components/MatrixRainingCode';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,6 +30,10 @@ function App() {
   }, []);
 
   return (
+    <>
+    <div style={{ position: 'absolute', width: '100vw', height: '100vh', zIndex: '-1'}}>
+    <MatrixRainingCode/>
+    </div>
     <div
       className={`select-none font-custom flex flex-col min-h-screen justify-between text-white transition-all duration-700 ease-in ${isVisible ? 'opacity-100' : 'opacity-0'}`}
     >
@@ -90,6 +95,7 @@ function App() {
         <Footer className="w-full flex justify-center" />
       </section>
     </div>
+    </>
   );
 }
 

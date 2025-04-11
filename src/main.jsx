@@ -6,9 +6,7 @@ import MatrixRainingCode from './components/MatrixRainingCode.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div style={{ position: 'absolute', width: '100vw', height: '100vh', zIndex: '-1'}}>
-    <MatrixRainingCode/>
-    </div>
+    
     <App />
   </StrictMode>,
 )
